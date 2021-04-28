@@ -19,8 +19,10 @@ class Busquedas {
             palabras = palabras.map( p => p[0].toUpperCase() + p.substring(1) );
 
             return palabras.join(' ')
+
         })
     }
+
 
     get paramsMapbox() {
         return {
@@ -66,7 +68,7 @@ class Busquedas {
         try {
             
             const instance = axios.create({
-                baseURL: ` `,
+                baseURL: `https://api.openweathermap.org/data/2.5/weather`,
                 params: { ...this.paramsWeather, lat, lon }
             })
 
